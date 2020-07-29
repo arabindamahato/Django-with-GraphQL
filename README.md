@@ -14,7 +14,7 @@
 - http://127.0.0.1:8000/graphql
 
 ## To List all users present in database use the below query in GraphiQL interface and hit the play button		
-		 query {
+	query {
         users {
           edges {
             node {
@@ -31,7 +31,7 @@
 
 ## To Register a new User Use the below code on  GraphiQL interface and hit the play button: 
 
-		 mutation {
+	mutation {
         register(
           email: "arabinda@email.com",
           username: "arabindamahato",
