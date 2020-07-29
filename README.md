@@ -29,6 +29,14 @@
       }
 
 
+###### Screenshot
+
+<p align="center"> 
+<img src="Screenshots/demo.png">
+</p>
+
+
+
 ## To Register a new User Use the below code on  GraphiQL interface and hit the play button: 
 
 	mutation {
