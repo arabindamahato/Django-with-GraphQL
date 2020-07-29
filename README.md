@@ -14,7 +14,7 @@
 - http://127.0.0.1:8000/graphql
 
 ## To List all users present in database use the below query in GraphiQL interface and hit the play button		
-		 `query {
+		 query {
         users {
           edges {
             node {
@@ -26,12 +26,12 @@
             }
           }
         }
-      }` 
+      }
 
 
 ## To Register a new User Use the below code on  GraphiQL interface and hit the play button: 
 
-		 `mutation {
+		 mutation {
         register(
           email: "arabinda@email.com",
           username: "arabindamahato",
@@ -43,11 +43,12 @@
           errors,
           token,
           refreshToken
-        }}`
+        }
+      }
 
 
 ## You will get this type of result after registering new user along with token. 
-         `{
+    {
       "data": {
         "register": {
           "success": true,
@@ -56,11 +57,11 @@
           "refreshToken": "20540e79d27e599516fbcfa0991bc1dc3e82e840"
         }
       }
-    }`
+    }
 
 
 ## Check if the new user is really added on the database or not. Use the below code on GraphiQL interface and hit the play button: 
-     `query {
+    query {
     users (last: 1){
     edges {
       node {
@@ -74,12 +75,12 @@
           }
         }
       }
-    }`
+    }
 
 
 
 ## You will get the output like that -
-     ` {
+    {
       "data": {
         "users": {
           "edges": [
@@ -97,12 +98,12 @@
           ]
         }
       }
-    }`
+    }
 
 
 ## To login with the registered user. Use the below code along with correct username and password :
 
-     ` mutation {
+     mutation {
         tokenAuth(username: "arabindamahato", password: "Jhantulal@1994") {
           success,
           errors,
@@ -115,12 +116,12 @@
             username,
           }
         }
-      }`
+      }
 
 
 ## After successfully login you will get this type of response : 
 
-     `{
+    {
       "data": {
         "tokenAuth": {
           "success": true,
@@ -134,4 +135,4 @@
           }
         }
       }
-    }`
+    }
