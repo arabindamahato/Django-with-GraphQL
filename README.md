@@ -29,7 +29,7 @@
 			}
 `
 
-- To Register a new User Use the below code on  GraphiQL interface and hit the play button: 		
+  - To Register a new User Use the below code on  GraphiQL interface and hit the play button: 		
 		* `mutation {
   register(
     email: "arabinda@email.com",
@@ -45,8 +45,8 @@
 }
 `
 
-- You will get this type of result after registering new user along with token. 
-* `{
+  - You will get this type of result after registering new user along with token. 
+    * `{
   "data": {
     "register": {
       "success": true,
@@ -58,8 +58,8 @@
 }
 `
 
-- Check if the new user is really added on the database or not. Use the below code on GraphiQL interface and hit the play button: 
-* `query {
+  - Check if the new user is really added on the database or not. Use the below code on GraphiQL interface and hit the play button: 
+    * `query {
   users (last: 1){
     edges {
       node {
@@ -75,8 +75,8 @@
   }
 }
 `
-- You will get the output like that -
-* ` {
+  - You will get the output like that -
+    * ` {
   "data": {
     "users": {
       "edges": [
@@ -98,9 +98,9 @@
  `
 
 
-- To login with the registered user. Use the below code along with correct username and password :
+  - To login with the registered user. Use the below code along with correct username and password :
 
-* ` mutation {
+    * ` mutation {
   tokenAuth(username: "arabindamahato", password: "Jhantulal@1994") {
     success,
     errors,
@@ -118,7 +118,8 @@
 
 
  - After successfully login you will get this type of response : 
- * ` {
+ 
+  * ` {
   "data": {
     "tokenAuth": {
       "success": true,
